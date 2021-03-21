@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Job Listings Site</title>
+</head>
+
+<body>
+  <nav></nav>
+  <main>
+    <div class="bg-job">
+      <div id="searchFilter" class="searchFilter">
+        <!-- <div class="tag">
+          <span>CSS</span>
+          <i class="fas fa-times" data-item="CSS"></i>
+        </div> -->
+        <input type="text">
+        <a href="#">Clear</a>
+      </div>
+
+      <div class="job-container">
+        
+        <div class="job-items" data-item="1">
+          <div class="job-comp-ava">
+            <img src="images/photosnap.svg" alt="Photosnap">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Photosnap</span>
+              <span class="new-tag">New!</span>
+              <span class="featured-tag">Featured</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Senior Frontend Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>1d ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>USA only</span>
+            </div>
+          </div>
+
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Senior"><span>Senior</span></li>
+              <li data-language="HTML"><span>HTML</span></li>
+              <li data-language="CSS"><span>CSS</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="2">
+          <div class="job-comp-ava">
+            <img src="images/manage.svg" alt="Manage">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Manage</span>
+              <span class="new-tag">New!</span>
+              <span class="featured-tag">Featured</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Fullstack Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>1d ago</span>
+              <span class="dot"></span>
+              <span>Part Time</span>
+              <span class="dot"></span>
+              <span>Remote</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Fullstack"><span>Fullstack</span></li>
+              <li data-level="Midweight"><span>Midweight</span></li>
+              <li data-language="Python"><span>Python</span></li>
+              <li data-tool="React"><span>React</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="job-items" data-item="3">
+          <div class="job-comp-ava">
+            <img src="images/account.svg" alt="Account">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Account</span>
+              <span class="new-tag">New!</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Junior Frontend Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>2d ago</span>
+              <span class="dot"></span>
+              <span>Part Time</span>
+              <span class="dot"></span>
+              <span>USA only</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-tool="React"><span>React</span></li>
+              <li data-tool="Sass"><span>Sass</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="4">
+          <div class="job-comp-ava">
+            <img src="images/myhome.svg" alt="MyHome">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>MyHome</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Junior Frontend Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>5d ago</span>
+              <span class="dot"></span>
+              <span>Contract</span>
+              <span class="dot"></span>
+              <span>USA only</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-language="CSS"><span>CSS</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="5">
+          <div class="job-comp-ava">
+            <img src="images/loop-studios.svg" alt="Loop Studios">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Loop Studios</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Software Engineer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>1w ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>Worldwide</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Fullstack"><span>Fullstack</span></li>
+              <li data-level="Midweight"><span>Midweight</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-tool="Ruby"><span>Ruby</span></li>
+              <li data-tool="Sass"><span>Sass</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="6">
+          <div class="job-comp-ava">
+            <img src="images/faceit.svg" alt="FaceIt">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>FaceIt</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Junior Backend Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>2w ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>UK only</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Backend"><span>Backend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-tool="Ruby"><span>Ruby</span></li>
+              <li data-tool="RoR"><span>RoR</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="7">
+          <div class="job-comp-ava">
+            <img src="images/shortly.svg" alt="Shortly">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Shortly</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Junior Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>2w ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>Worldwide</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-language="HTML"><span>HTML</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-tool="Sass"><span>Sass</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="8">
+          <div class="job-comp-ava">
+            <img src="images/insure.svg" alt="Insure">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Insure</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Junior Frontend Developer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>2w ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>USA only</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-tool="Vue"><span>Vue</span></li>
+              <li data-tool="Sass"><span>Sass</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="9">
+          <div class="job-comp-ava">
+            <img src="images/eyecam-co.svg" alt="Eyecam Co.">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>Eyecam Co.</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Full Stack Engineer</h3>
+            </div>
+
+            <div class="job-info">
+              <span>3w ago</span>
+              <span class="dot"></span>
+              <span>Full Time</span>
+              <span class="dot"></span>
+              <span>Worldwide</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Fullstack"><span>Fullstack</span></li>
+              <li data-level="Midweight"><span>Midweight</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-language="Python"><span>Python</span></li>
+              <li data-tool="Django"><span>Django</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-items" data-item="10">
+          <div class="job-comp-ava">
+            <img src="images/the-air-filter-company.svg" alt="The Air Filter Company">
+          </div>
+
+          <div class="job-content">
+            <div class="job-comp-name">
+              <span>The Air Filter Company</span>
+            </div>
+
+            <div class="job-position">
+              <h3>Front-end Dev</h3>
+            </div>
+
+            <div class="job-info">
+              <span>1mo ago</span>
+              <span class="dot"></span>
+              <span>Part Time</span>
+              <span class="dot"></span>
+              <span>Worldwide</span>
+            </div>
+          </div>
+          
+          <div class="job-tags">
+            <ul>
+              <li data-role="Frontend"><span>Frontend</span></li>
+              <li data-level="Junior"><span>Junior</span></li>
+              <li data-language="JavaScript"><span>JavaScript</span></li>
+              <li data-tool="React"><span>React</span></li>
+              <li data-tool="Sass"><span>Sass</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  <!-- <script src="app.js"></script> -->
+  <script src="script.js"></script>
+</body>
+</html>
