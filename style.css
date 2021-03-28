@@ -49,6 +49,10 @@ main
     align-items: center;
     justify-content: flex-start;
 }
+.searchFilter .tag-container
+{
+    display: flex;
+}
 .searchFilter .tag
 {
     display: flex;
@@ -154,6 +158,11 @@ span.featured-tag
 {
     background-color: #2B3939;
 }
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}
 
 .job-position h3
 {
@@ -195,8 +204,20 @@ span.featured-tag
 {
     float: left;
     margin: 0 6px;
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+    padding: 10px 10px 8px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 4px;
 }
-.job-tags ul li span
+.job-tags ul li:hover
+{
+    color: #fff;
+    background-color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+/* .job-tags ul li span
 {
     color: hsl(180, 29%, 50%);
     background-color: hsl(180, 31%, 95%);
@@ -210,4 +231,4 @@ span.featured-tag
     color: #fff;
     background-color: hsl(180, 29%, 50%);
     cursor: pointer;
-}
+} */
