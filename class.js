@@ -1,8 +1,9 @@
 class Job {
-    async getJob(){
-        const jobDataResponse = await fetch('./data.json');
-        const jobData = await jobDataResponse.json();
-        return jobData;        
+    async getJobs(){
+        const apiUrl = './data.json';
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        return data;        
     }
 }
 
@@ -12,6 +13,26 @@ class UI {
         this.jobContainer = document.querySelector('.job-container');
         this.tagContainer = document.querySelector('.tag-container');
         this.input = document.querySelector('#searchFilter input');
+    }
+
+	clearAlert() {
+		const currentAlert = document.querySelector('.alert');
+		if(currentAlert){
+			currentAlert.remove();
+		}
+    }
+    
+    showAlert(mes){
+        this.clearAlert();
+        let alertMes = `
+            <div class="alert job-items">
+                <p>${mes}</p>
+            </div>
+        `;
+        this.searchFilter.insertAdjacentHTML('afterend', alertMes);
+        setTimeout(() => {
+			this.clearAlert();
+		}, 3000);
     }
 
     showJob(jobs){
@@ -48,8 +69,8 @@ class UI {
                     <ul>
                         <li data-role="${job.role}">${job.role}</li>
                         <li data-level="${job.level}">${job.level}</li>
-                        ${job.languages.length ? job.languages.map(language => `<li data-language="${language}">${language}</li>`).join("") : ''}
-                        ${job.tools.length ? job.tools.map(tool => `<li data-tool="${tool}">${tool}</li>`).join("") : ''}
+                        ${job.languages.length ? job.languages.map(language => `<li data-languages="${language}">${language}</li>`).join("") : ''}
+                        ${job.tools.length ? job.tools.map(tool => `<li data-tools="${tool}">${tool}</li>`).join("") : ''}
                     </ul>
                 </div>
             </div>
@@ -60,7 +81,11 @@ class UI {
     };
 
     showSearchbar(tag){
-        tag.parentElement.parentElement.className == 'job-tags' || this.tagContainer.innerHTML !== '' ? this.searchFilter.style.display = 'flex' : this.searchFilter.style.display = 'none';
+        if(tag.tagName === 'I'){
+            this.tagContainer.innerHTML !== '' ? this.searchFilter.style.display = 'flex' : this.searchFilter.style.display = 'none';
+        } else {
+            tag.parentElement.parentElement.className == 'job-tags' || this.tagContainer.innerHTML !== '' ? this.searchFilter.style.display = 'flex' : this.searchFilter.style.display = 'none';
+        }
     }
 
     createTag(label){
@@ -70,7 +95,6 @@ class UI {
         span.innerHTML = label;
         const closeIcon = document.createElement('i');
         closeIcon.setAttribute('class', 'fas fa-times' );
-        closeIcon.setAttribute('data-item', label);
         div.appendChild(span);
         div.appendChild(closeIcon);
         return div;
@@ -93,11 +117,12 @@ class UI {
         })
     }
 
-    filterByTag(tag){
-        
-    }
-
-    clearJob(){
-        this.jobContainer.innerHTML = '';
-    }
+    // deleteTagFromSearchbar(tagArr, tag){
+    //     const tagLabel = tag.previousElementSibling.innerHTML;
+    //     const index = tagArr.indexOf(tagLabel);
+    //     tagArr.splice(index, 1);
+    //     this.addTagsToSearchbar(tagArr, tagLabel);
+    //     return tagArr;
+    // }
+    
 }

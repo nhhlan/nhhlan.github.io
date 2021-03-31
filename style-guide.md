@@ -30,3 +30,4 @@ The designs were created to the following widths:
 
 - Family: [Spartan](https://fonts.google.com/specimen/Spartan)
 - Weights: 500, 700
+https://stackoverflow.com/questions/61621451/filtering-js-array-of-objects-based-on-tags

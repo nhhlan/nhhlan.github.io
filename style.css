@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
 
-html, body, h5, h4, h3, h2, h1, p
+html, body, h5, h4, h3, h2, h1, p, ul, li
 {
     box-sizing: border-box;
     margin: 0;
@@ -28,14 +28,21 @@ main
 }
 .bg-job
 {
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
     min-height: 100vh;
+}
+.alert p
+{
+    text-align: center;   
+    margin: 0 auto; 
+    font-size: 1.2rem;
+    color: #2B3939;
 }
 
 .searchFilter
 {
-    max-width: 1080px;
+    max-width: 870px;
     width: 100%;
     height: 80px;
     position: absolute;
@@ -83,11 +90,11 @@ main
 .searchFilter input
 {
     height: 78px;
-    width: 90%;
+    width: auto;
     border: none;
     border-radius: 5px;
     outline: none;
-    font-size: 15px;
+    font-size: 1rem;
     color: #2B3939;
     font-family: Spartan;
 }
@@ -114,6 +121,7 @@ main
     box-shadow: 0 15px 20px -5px rgba(13, 113, 130, 15%);
     border-radius: 5px;
     display: flex;
+    flex: 0 1 auto;
     align-items: center;
     justify-content: flex-start;
 }
@@ -130,7 +138,6 @@ main
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* justify-content: flex-start; */
 }
 .job-comp-name span
 {
@@ -147,7 +154,7 @@ span.new-tag, span.featured-tag
     color: #fff;
     border-radius: 20px;
     margin: 0 4px;
-    font-size: 11px;
+    font-size: 0.73rem;
     font-weight: 500;
 }
 span.new-tag
@@ -166,7 +173,7 @@ span.featured-tag
 
 .job-position h3
 {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: 12px 0 8px;
     color: #2B3939;
 }
@@ -177,9 +184,9 @@ span.featured-tag
 }
 .job-info span
 {
-    font-size: 14px;
+    font-size: 0.93rem;
     color: #7C8F8F;
-    line-height: 14px;
+    line-height: 0.93rem;
 }
 .job-info span.dot
 {
@@ -208,7 +215,7 @@ span.featured-tag
     background-color: hsl(180, 31%, 95%);
     padding: 10px 10px 8px;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 0.86rem;
     border-radius: 4px;
 }
 .job-tags ul li:hover
@@ -217,18 +224,63 @@ span.featured-tag
     background-color: hsl(180, 29%, 50%);
     cursor: pointer;
 }
-/* .job-tags ul li span
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
 {
-    color: hsl(180, 29%, 50%);
-    background-color: hsl(180, 31%, 95%);
-    padding: 10px 10px 8px;
-    font-weight: 700;
-    font-size: 13px;
-    border-radius: 4px;
+    .bg-job
+    {
+        max-width: 750px;
+    }
+    .searchFilter
+    {
+        max-width: 35rem;
+        width: 35rem;
+        height: 100px;
+    }
+    .searchFilter input
+    {
+        width: 1rem;
+    }
+    .searchFilter .tag
+    {
+        margin-bottom: 0.5rem;
+    }
+    .tag-container
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .job-items
+    {
+        flex-direction: column;
+        position: relative;
+        height: 200px;
+        padding-top: 4rem;
+        align-items: flex-start;
+        padding-left: 3rem;
+        margin-bottom: 3rem;
+    }
+    .job-comp-ava
+    {
+        margin: 1rem;
+        position: absolute;
+        top: -3rem;
+        left: 1rem;
+    }
+    .job-comp-ava img
+    {
+        width: 4rem;
+    }
+    .job-tags
+    {
+        margin: 0;
+        margin-top: 2rem;
+        margin-left: -6px;
+    }
 }
-.job-tags ul li span:hover
+
+@media screen and (max-width: 767px)
 {
-    color: #fff;
-    background-color: hsl(180, 29%, 50%);
-    cursor: pointer;
-} */
+
+}
